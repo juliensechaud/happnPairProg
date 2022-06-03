@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ListViewController: UIViewController {
 	
 	private let repository = Repository()
 	private var users = [User]() {
@@ -29,6 +29,7 @@ class ViewController: UIViewController {
 	}(UITableView())
 		
 	override func viewDidLoad() {
+		super.viewDidLoad()
 		setupUI()
 		fetch()
 	}
@@ -57,7 +58,7 @@ class ViewController: UIViewController {
 
 }
 
-extension ViewController: UITableViewDataSource, UITableViewDelegate {
+extension ListViewController: UITableViewDataSource, UITableViewDelegate {
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		users.count
 	}
